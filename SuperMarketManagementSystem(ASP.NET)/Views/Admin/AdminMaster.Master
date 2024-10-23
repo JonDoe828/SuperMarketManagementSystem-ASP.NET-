@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.Master.cs" Inherits="SuperMarketManagementSystem_ASP.NET_.Views.Admin.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        *{
+            font-family:STXihei;
+        }
+        #left{
+            color:white;
+            height:1500px;
+            background-color:teal;
+        }
+        label{
+            color:white
+        }
+    </style>
+    <link href="../../Assets/Lib/css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2" id="left">
+                <div style="height:120px">
+                </div>
+
+                <div class="mb-3">
+                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>Products</label>  </a>                       
+                </div>
+                <div class="mb-3">
+                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>Products</label>  </a>                       
+                </div>
+                <div class="mb-3">
+                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>Supplier</label>  </a>                       
+                </div>
+                <div class="mb-3">
+                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>Category</label>  </a>                       
+                </div>
+                <div class="mb-3">
+                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>Log Out</label>  </a>                       
+                </div>
+
+                    </div>
+                    <div class="col-10">
+                        <form id="form1" runat="server">
+                            <div>
+                                <asp:ContentPlaceHolder ID="MyContent" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </form>                        
+                    </div>              
+            </div>          
+        </div>
+    </div>
+
+
+
+   
+</body>
+</html>
