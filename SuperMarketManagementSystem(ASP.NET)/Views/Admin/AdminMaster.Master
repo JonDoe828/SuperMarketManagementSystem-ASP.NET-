@@ -17,7 +17,7 @@
         }
         label{
             color:white
-        }
+        }        
     </style>
     <link href="../../Assets/Lib/css/bootstrap.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -31,23 +31,23 @@
                 </div>
 
                 <div class="mb-3">
-                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
-                    <a href="#">  <label>Products</label>  </a>                       
+                    <img src="../../Assets/Images/icons8-product-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>Product</label>  </a>                       
                 </div>
                 <div class="mb-3">
-                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
-                    <a href="#">  <label>Products</label>  </a>                       
+                    <img src="../../Assets/Images/icons8-Manufacturer-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>Manufacturer</label>  </a>                       
                 </div>
                 <div class="mb-3">
-                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
-                    <a href="#">  <label>Supplier</label>  </a>                       
+                    <img src="../../Assets/Images/icons8-user-100.png" style="height:40px;width:40px" alt="" />
+                    <a href="#">  <label>User</label>  </a>                       
                 </div>
                 <div class="mb-3">
-                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
+                    <img src="../../Assets/Images/icons8-category-100.png" style="height:40px;width:40px" alt="" />
                     <a href="#">  <label>Category</label>  </a>                       
                 </div>
                 <div class="mb-3">
-                    <img src="../../Assets/Images/icons8-新产品-100.png" style="height:40px;width:40px" alt="" />
+                    <img src="../../Assets/Images/icons8-logout-100.png" style="height:40px;width:40px" alt="" />
                     <a href="#">  <label>Log Out</label>  </a>                       
                 </div>
 

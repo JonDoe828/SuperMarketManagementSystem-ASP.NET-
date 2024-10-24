@@ -74,8 +74,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\icons8-category-100.png" />
+    <Content Include="Assets\Images\icons8-logout-100.png" />
+    <Content Include="Assets\Images\icons8-Manufacturer-100.png" />
     <Content Include="Assets\Images\icons8-supermarket-100.png" />
-    <Content Include="Assets\Images\icons8-新产品-100.png" />
+    <Content Include="Assets\Images\icons8-product-100.png" />
+    <Content Include="Assets\Images\icons8-user-100.png" />
     <Content Include="Assets\Lib\css\bootstrap-grid.css" />
     <Content Include="Assets\Lib\css\bootstrap-grid.min.css" />
     <Content Include="Assets\Lib\css\bootstrap-grid.rtl.css" />
