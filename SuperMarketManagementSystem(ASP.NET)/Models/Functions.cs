@@ -15,21 +15,21 @@ namespace SuperMarketManagementSystem_ASP.NET_.Models
 
         public Functions()
         {
-            // 初始化数据库连接字符串
+            // Initialize the database connection string
             Constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\D\Documents\SupermarketDb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
             Con = new SqlConnection(Constr);
             Cmd = new SqlCommand();
             Cmd.Connection = Con;
         }
 
-        // 获取数据的方法
+        // Methods for obtaining data
         public DataTable GetData(string Query)
         {
             DataTable dt = new DataTable();
 
             try
             {
-                // 使用 SqlDataAdapter 填充 DataTable
+                // Populating a DataTable using a SqlDataAdapter
                 using (SqlDataAdapter SqlDataAdapter = new SqlDataAdapter(Query, Con))
                 {
                     SqlDataAdapter.Fill(dt);
@@ -37,14 +37,14 @@ namespace SuperMarketManagementSystem_ASP.NET_.Models
             }
             catch (Exception ex)
             {
-                // 处理异常并打印错误信息
-                Console.WriteLine($"查询数据时出错: {ex.Message}");
+                // Handle exceptions and print error messages
+                Console.WriteLine($"Error querying data: {ex.Message}");
             }
 
             return dt;
         }
 
-        // 设置数据（插入、更新、删除）的方法
+        // Methods for setting data (insert, update, delete)
         public int SetData(string Query)
         {
             int cnt = 0;
@@ -61,12 +61,12 @@ namespace SuperMarketManagementSystem_ASP.NET_.Models
             }
             catch (Exception ex)
             {
-                // 处理异常并打印错误信息
-                Console.WriteLine($"设置数据时出错: {ex.Message}");
+                // Handle exceptions and print error messages
+                Console.WriteLine($"Error setting data: {ex.Message}");
             }
             finally
             {
-                // 确保连接被关闭
+                // Make sure the connection is closed
                 if (Con.State == ConnectionState.Open)
                 {
                     Con.Close();

@@ -53,7 +53,7 @@
                     <Columns>
                         <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Select" />
                     </Columns>
-                    </asp:GridView>
+                 </asp:GridView>
             </div>
         </div>
     </div>

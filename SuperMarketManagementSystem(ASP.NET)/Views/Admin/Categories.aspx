@@ -13,21 +13,36 @@
             <div class="col-md-4">
                 <div class="mb-3">                
                     <label for="" class="form-label text-success">Category Name</label> 
-                    <input type="text" placeholder="" autocomplete="off" name="name" value="" class="form-control"/>
+                    <input type="text" placeholder="" autocomplete="off" name="name" value="" class="form-control" runat="server" id="CategoryName" />
                 </div>
                 <div class="mb-3">                
                     <label for="" class="form-label text-success">Details</label> 
-                    <input type="email" placeholder="" autocomplete="off" name="name" value="" class="form-control"/>                
+                    <input type="email" placeholder="" autocomplete="off" name="name" value="" class="form-control"runat="server" id="CategoryDescrption" />                
                 </div>
                 
                 <div class="row">
-                    <div class="col-md-4"><asp:Button Text="EDIT" runat="server" class="btn-warning btn-block btn" Width="100px"/></div>
-                    <div class="col-md-4"><asp:Button Text="SAVE" runat="server" class="btn-success btn-block btn" Width="100px"/></div>
-                    <div class="col-md-4"><asp:Button Text="DELETE" runat="server" class="btn-danger btn-block btn" Width="100px"/></div>
+                    <div class="col-md-4"><asp:Button Text="EDIT" runat="server" class="btn-warning btn-block btn" Width="100px" id="EditBtn" OnClick="EditBtn_Click" /></div>
+                    <div class="col-md-4"><asp:Button Text="SAVE" runat="server" class="btn-success btn-block btn" Width="100px" id="SaveBtn" OnClick="SaveBtn_Click"/></div>
+                    <div class="col-md-4"><asp:Button Text="DELETE" runat="server" class="btn-danger btn-block btn" Width="100px" id="DeleteBtn" OnClick="DeleteBtn_Click"/></div>
                 </div>                       
             </div>
             <div class="col-md-8">
-                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                <asp:GridView ID="CategoryList" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="CategoryList_SelectedIndexChanged" Width="600px">
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <EditRowStyle BackColor="#999999" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="teal" Font-Bold="false" ForeColor="White" />
+                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                    <Columns>
+                        <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Select" />
+                    </Columns>
+                 </asp:GridView>
             </div>
         </div>
     </div>
