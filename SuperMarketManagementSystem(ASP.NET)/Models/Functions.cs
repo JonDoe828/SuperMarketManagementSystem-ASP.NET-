@@ -16,7 +16,7 @@ namespace SuperMarketManagementSystem_ASP.NET_.Models
         private string ConStr;
         public Functions()
         {
-            ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\D\Documents\SupermarketDb.mdf;Integrated Security=True;Connect Timeout=30";
+            ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\D\Desktop\C#\SuperMarketManagementSystem(ASP.NET)\SupermarketDb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
             Con = new SqlConnection(ConStr);
             Cmd = new SqlCommand();
             Cmd.Connection = Con;
