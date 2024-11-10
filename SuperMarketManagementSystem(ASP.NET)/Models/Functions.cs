@@ -11,69 +11,112 @@ namespace SuperMarketManagementSystem_ASP.NET_.Models
     {
         private SqlConnection Con;
         private SqlCommand Cmd;
-        private string Constr;
-
+        //private DataTable dt;
+        private SqlDataAdapter sda;
+        private string ConStr;
         public Functions()
         {
-            // Initialize the database connection string
-            Constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\D\Documents\SupermarketDb.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
-            Con = new SqlConnection(Constr);
+            ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\D\Documents\SupermarketDb.mdf;Integrated Security=True;Connect Timeout=30";
+            Con = new SqlConnection(ConStr);
             Cmd = new SqlCommand();
             Cmd.Connection = Con;
         }
 
-        // Methods for obtaining data
         public DataTable GetData(string Query)
         {
             DataTable dt = new DataTable();
+            sda = new SqlDataAdapter(Query, ConStr);
+            sda.Fill(dt);
+            return dt;
+        }
+        //Overloading for GetData(),Different parameter lists
+        public DataTable GetData(string query, Dictionary<string, object> parameters = null)
+        {
+            DataTable dt = new DataTable();
 
-            try
+            if (Con.State == ConnectionState.Closed)
             {
-                // Populating a DataTable using a SqlDataAdapter
-                using (SqlDataAdapter SqlDataAdapter = new SqlDataAdapter(Query, Con))
+                Con.Open();
+            }
+
+            using (SqlCommand cmd = new SqlCommand(query, Con))
+            {
+                if (parameters != null)
                 {
-                    SqlDataAdapter.Fill(dt);
+                    foreach (var param in parameters)
+                    {
+                        cmd.Parameters.AddWithValue(param.Key, param.Value);
+                    }
+                }
+
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    sda.Fill(dt);
                 }
             }
-            catch (Exception ex)
-            {
-                // Handle exceptions and print error messages
-                Console.WriteLine($"Error querying data: {ex.Message}");
-            }
 
+            Con.Close();
             return dt;
         }
 
-        // Methods for setting data (insert, update, delete)
-        public int SetData(string Query)
+        public int SetData(string query, Dictionary<string, object> parameters = null)
         {
             int cnt = 0;
 
-            try
+            // 确保连接已关闭，然后打开
+            if (Con.State == ConnectionState.Closed)
             {
-                if (Con.State == ConnectionState.Closed)
-                {
-                    Con.Open();
-                }
+                Con.Open();
+            }
 
-                Cmd.CommandText = Query;
-                cnt = Cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
+            // 设置命令文本
+            Cmd.CommandText = query;
+
+            // 清除并添加参数
+            Cmd.Parameters.Clear();
+            if (parameters != null)
             {
-                // Handle exceptions and print error messages
-                Console.WriteLine($"Error setting data: {ex.Message}");
-            }
-            finally
-            {
-                // Make sure the connection is closed
-                if (Con.State == ConnectionState.Open)
+                foreach (var param in parameters)
                 {
-                    Con.Close();
+                    Cmd.Parameters.AddWithValue(param.Key, param.Value);
                 }
             }
+
+            // 执行命令并获取受影响的行数
+            cnt = Cmd.ExecuteNonQuery();
+
+            // 关闭连接
+            Con.Close();
 
             return cnt;
         }
+        public object GetScalar(string query, Dictionary<string, object> parameters = null)
+        {
+            object result = null;
+
+            // 确保连接已打开
+            if (Con.State == ConnectionState.Closed)
+            {
+                Con.Open();
+            }
+
+            using (SqlCommand cmd = new SqlCommand(query, Con))
+            {
+                if (parameters != null)
+                {
+                    foreach (var param in parameters)
+                    {
+                        cmd.Parameters.AddWithValue(param.Key, param.Value);
+                    }
+                }
+
+                result = cmd.ExecuteScalar();
+            }
+
+            // 关闭连接
+            Con.Close();
+            return result;
+        }
+
     }
 }

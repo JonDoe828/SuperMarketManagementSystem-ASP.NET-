@@ -7,57 +7,48 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManagementSystem_ASP.NET_.Views.Admin
+namespace SuperMarketManagementSystem_ASP.NET_.Views.Customer
 {
 
 
-    public partial class Products
+    public partial class Billing
     {
 
         /// <summary>
-        /// PName 控件。
+        /// PnameTb 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText PName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText PnameTb;
 
         /// <summary>
-        /// PManufact 控件。
+        /// PriceTb 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PManufact;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText PriceTb;
 
         /// <summary>
-        /// PCategory 控件。
+        /// QtyTb 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PCategory;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText QtyTb;
 
         /// <summary>
-        /// PPrice 控件。
+        /// AddToBillBtn 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText PPrice;
-
-        /// <summary>
-        /// PQty 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText PQty;
+        protected global::System.Web.UI.WebControls.Button AddToBillBtn;
 
         /// <summary>
         /// ErrMsg 控件。
@@ -69,33 +60,6 @@ namespace SuperMarketManagementSystem_ASP.NET_.Views.Admin
         protected global::System.Web.UI.WebControls.Label ErrMsg;
 
         /// <summary>
-        /// EditBtn 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EditBtn;
-
-        /// <summary>
-        /// SaveBtn 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SaveBtn;
-
-        /// <summary>
-        /// DeleteBtn 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteBtn;
-
-        /// <summary>
         /// ProductList 控件。
         /// </summary>
         /// <remarks>
@@ -103,5 +67,50 @@ namespace SuperMarketManagementSystem_ASP.NET_.Views.Admin
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView ProductList;
+
+        /// <summary>
+        /// ShoppingCartList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ShoppingCartList;
+
+        /// <summary>
+        /// MoneyLabel 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MoneyLabel;
+
+        /// <summary>
+        /// GrdTotalTb 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GrdTotalTb;
+
+        /// <summary>
+        /// PrintBtn 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PrintBtn;
+
+        /// <summary>
+        /// BillContent 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label BillContent;
     }
 }

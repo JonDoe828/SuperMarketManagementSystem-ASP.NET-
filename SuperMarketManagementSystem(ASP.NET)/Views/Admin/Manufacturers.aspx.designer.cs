@@ -11,7 +11,7 @@ namespace SuperMarketManagementSystem_ASP.NET_.Views.Admin
 {
 
 
-    public partial class Suppliers
+    public partial class Manufacturer
     {
 
         /// <summary>

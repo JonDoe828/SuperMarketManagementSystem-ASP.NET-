@@ -7,12 +7,21 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace SuperMarketManagementSystem_ASP.NET_.Views
+namespace SuperMarketManagementSystem_ASP.NET_.Views.Customer
 {
 
 
-    public partial class Login
+    public partial class CustomerMaster
     {
+
+        /// <summary>
+        /// head 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
         /// form1 控件。
@@ -24,39 +33,12 @@ namespace SuperMarketManagementSystem_ASP.NET_.Views
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// UnameTb 控件。
+        /// MyContent 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl UnameTb;
-
-        /// <summary>
-        /// PasswordTb 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword PasswordTb;
-
-        /// <summary>
-        /// ErrMsg 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrMsg;
-
-        /// <summary>
-        /// LoginBtn 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginBtn;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MyContent;
     }
 }

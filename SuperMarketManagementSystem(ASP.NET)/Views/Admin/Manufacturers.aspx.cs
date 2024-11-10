@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SuperMarketManagementSystem_ASP.NET_.Views.Admin
 {
-    public partial class Suppliers : System.Web.UI.Page
+    public partial class Manufacturer : System.Web.UI.Page
     {
         Models.Functions Con;
         protected void Page_Load(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace SuperMarketManagementSystem_ASP.NET_.Views.Admin
                     string MName = ManufacturerId.Value;
                     string PerNum = LicenseNum.Value;
                     string Origin = PlaceCb.SelectedItem.ToString();
-
+                    
                     string Query = "insert into ManufacturerTbl values('{0}','{1}','{2}')";
                     Query = string.Format(Query, MName, PerNum, Origin);
                     Con.SetData(Query);

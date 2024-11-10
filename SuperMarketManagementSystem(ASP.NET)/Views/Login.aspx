@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SuperMarketManagementSystem_ASP.NET_.Views.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SuperMarketManagementSystem_ASP.NET_.Views.Login" %>
 
 <!DOCTYPE html>
 
@@ -27,16 +27,16 @@
                  
                     <div class="mt-3">
                         <label for="" class="form-label">  Username  </label> 
-                        <input type="text" placeholder="" autocomplete="off" name="name" value="" class="form-control" id="UnameTb"/>
+                        <input type="email" placeholder="" autocomplete="off" name="name" value="" class="form-control" runat="server" id="UnameTb"/>
                     </div>
                     <div class="mt-3">
                         <label for="" class="form-label">  Password  </label> 
-                        <input type="password" placeholder="" autocomplete="off" name="name" value="" class="form-control" id="PasswordTb"/>
+                        <input type="password" placeholder="" autocomplete="off" name="name" value="" class="form-control" runat="server" id="PasswordTb"/>
                     </div>
                     <div class="mt-3 d-grid">
-                        <asp:Button Text="Log In" runat="server" class="btn-success btn" ID="LoginBtn"/>
+                         <asp:Label runat="server" ID="ErrMsg" class="text-danger text-center"></asp:Label><br />
+                        <asp:Button Text="Log In" runat="server" class="btn-success btn" ID="LoginBtn" OnClick="LoginBtn_Click"/>
                     </div>
-                    
                 </form>
             </div>
 
