@@ -35,3 +35,10 @@ OnlineSupermarket -> Views -> login.aspx
 
 5. Once login.aspx is selected and shown on your screen, you can
 rebuild the solution and run the code
+
+____________________________________________________________________________
+No examples of Interfaces
+No examples of Nunit Tests
+No example of Generics
+
+Intended report feature is missing + bugs with deleting users from admin
